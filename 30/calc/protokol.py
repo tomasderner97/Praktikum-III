@@ -1,3 +1,5 @@
+VERSION = "0.1.0"
+
 import scipy as sp
 from scipy.optimize import curve_fit
 from scipy.interpolate import UnivariateSpline
@@ -16,6 +18,8 @@ from uncertainties import unumpy
 from uncertainties.unumpy import nominal_values as noms
 from uncertainties.unumpy import std_devs as stds
 
+from tabulate import tabulate
+
 plt.rcParams["figure.figsize"] = (4*1.5,2.5*1.5)
 plt.rcParams["figure.dpi"] = 100
 plt.rcParams["text.usetex"] = True
@@ -26,6 +30,11 @@ plt.rcParams["text.latex.preamble"] = r"""
 \usepackage[decimalsymbol=comma]{siunitx}
 """
 
+def table_print(table, header=True):
+    if (header):
+        print(tabulate(table, headers="keys"))
+    else:
+        print(tabulate(table))
 
 def relative(self):
     return self.s / self.n
