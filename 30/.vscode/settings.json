@@ -6,4 +6,6 @@
         "*.synctex.gz": true,
         "**/__pycache__": true
     },
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
 }

@@ -1,26 +1,20 @@
-VERSION = "0.1.0"
+# VERSION 0.1.0
+"""
+This module serves as the basic import for scientific processing of data.
+It groups various useful modules and defines helper functions.
+"""
 
 import scipy as sp
 from scipy.optimize import curve_fit
 from scipy.interpolate import UnivariateSpline
-from scipy.interpolate import UnivariateSpline as USpline
 from scipy import array as arr
-
-import pandas as pd
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-import uncertainties
-from uncertainties import ufloat as uf
-import uncertainties.umath as um
-from uncertainties import unumpy
-from uncertainties.unumpy import nominal_values as noms
-from uncertainties.unumpy import std_devs as stds
-
 from tabulate import tabulate
 
-plt.rcParams["figure.figsize"] = (4*1.5,2.5*1.5)
+plt.rcParams["figure.figsize"] = (4*1.5, 2.5*1.5)
 plt.rcParams["figure.dpi"] = 100
 plt.rcParams["text.usetex"] = True
 plt.rcParams['text.latex.unicode'] = True
@@ -30,44 +24,17 @@ plt.rcParams["text.latex.preamble"] = r"""
 \usepackage[decimalsymbol=comma]{siunitx}
 """
 
+
 def table_print(table, header=True, tablefmt="simple", **kwargs):
-    if (header):
+    if header:
         print(tabulate(table, headers="keys", tablefmt=tablefmt, **kwargs))
     else:
         print(tabulate(table, tablefmt=tablefmt, **kwargs))
 
+
 def relative(self):
     return self.s / self.n
 
-uncertainties.core.Variable.rel = relative
-
-def eval_mean(values, syst_err=0, scale=1):
-    """
-    Calculates the mean of the values provided and the standard deviation of said mean. 
-    Optional systematic error is considered in the result.
-
-    Parameters
-    ----------
-    values : array like
-        Values for evaluation
-    syst_err : float, optional
-        Optional systematic error, it's square root is added to the square root of the mean's standard deviation.
-    scale : float, optional
-        Optional factor, by which the values should be multiplied. Used for unit conversion.
-
-    Returns
-    -------
-    result : ufloat Variable
-    """
-    vals_arr = arr(values) * scale
-    scaled_syst_err = syst_err * scale
-    mean = vals_arr.mean()
-    std_err = vals_arr.std(ddof=1)
-    std_of_mean = std_err / sp.sqrt(len(vals_arr))
-
-    complete_err = sp.sqrt(scaled_syst_err**2 + std_of_mean**2)
-
-    return uf(mean, complete_err)
 
 def f_line(x, a, b):
     """
@@ -128,9 +95,12 @@ class FitCurve:
         params, cov = curve_fit(f, xdata, ydata, *args, **kwargs)
         errors = [sp.sqrt(cov[i, i]) for i in range(len(cov))]
 
-        if len(sp.where(cov==sp.inf)[0]) > 0:
-            raise ValueError("Fit unsuccessful, provide better initial parameters (p0)")
-        self.params = [uf(param, err) for param, err in zip(params, errors)]
+        if len(sp.where(cov == sp.inf)[0]) > 0:
+            raise ValueError(
+                "Fit unsuccessful, provide better initial parameters (p0)")
+
+        self.params = params
+        self.errors = errors
         self.xdata = sp.array(xdata)
         self.ydata = sp.array(ydata)
         self.f = lambda x: f(x, *params)
@@ -151,11 +121,12 @@ class FitCurve:
         resolution : int
             Number of points used in between start and end (inclusive).
         overrun : float, (float, float)
-            fraction of x interval to add before start and after end. If tuple, the values are used for start and end separately.
+            fraction of x interval to add before start and after end. 
+            If tuple, the values are used for start and end separately.
         """
-        if start == None:
+        if start is None:
             start = self.xdata.min()
-        if end == None:
+        if end is None:
             end = self.xdata.max()
 
         interval_length = end - start
@@ -195,7 +166,8 @@ class Spline(UnivariateSpline):
 
     def curve(self, start=None, end=None, res=100, overrun=0):
         """
-        Calculates the curve of the spline, used as line of theoretical function or a lead for an eye.
+        Calculates the curve of the spline, used as line of theoretical function
+        or a lead for an eye.
 
         Parameters
         ----------
@@ -206,11 +178,12 @@ class Spline(UnivariateSpline):
         resolution : int
             Number of points used in between start and end (inclusive).
         overrun : float, (float, float)
-            fraction of x interval to add before start and after end. If tuple, the values are used for start and end separately.
+            fraction of x interval to add before start and after end. If tuple,
+            the values are used for start and end separately.
         """
-        if start == None:
+        if start is None:
             start = self.xdata.min()
-        if end == None:
+        if end is None:
             end = self.xdata.max()
 
         interval_length = end - start
@@ -228,45 +201,8 @@ class Spline(UnivariateSpline):
         return xes, ys
 
 
-def round_uncert(value):
-    return (0,0)
-    
-
-def split_df_uncert(df):
-    new = pd.DataFrame()
-    
-    for col in list(df.columns):
-        err = stds(df[col])
-        if sp.count_nonzero(err) > 0: 
-            nom_list = []
-            std_list = []
-            for v in df[col]:
-                nom_val, std_val = round_uncert(v)
-                nom_list.append(nom_val)
-                std_list.append(std_val)
-            new[col] = nom_list
-            new[f"s_{col}"] = std_list
-        else:
-            new[col] = df[col]
-    
-    return new
-        
-
-def latex_table(df):
-    ready_df = split_df_uncert(df)
-
-
 def main():
-    x = [1,2,3,4,5]
-    y = [8,2,6,4,7]
-
-    spl = Spline(x,y)
-    spl.set_smoothing_factor(0.1)
-
-    plt.plot(*spl.curve())
-    plt.plot(x, y)
-
-    plt.show()
+    pass
 
 
 if __name__ == '__main__':
