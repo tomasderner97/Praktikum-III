@@ -30,11 +30,11 @@ plt.rcParams["text.latex.preamble"] = r"""
 \usepackage[decimalsymbol=comma]{siunitx}
 """
 
-def table_print(table, header=True):
+def table_print(table, header=True, tablefmt="simple", **kwargs):
     if (header):
-        print(tabulate(table, headers="keys"))
+        print(tabulate(table, headers="keys", tablefmt=tablefmt, **kwargs))
     else:
-        print(tabulate(table))
+        print(tabulate(table, tablefmt=tablefmt, **kwargs))
 
 def relative(self):
     return self.s / self.n
