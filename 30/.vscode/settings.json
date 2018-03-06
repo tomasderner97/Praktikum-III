@@ -8,4 +8,13 @@
     },
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
+    "cSpell.language": "en,cs",
+    "cSpell.words": [
+        "Tolanského",
+        "fokometru",
+        "fokometrem"
+    ],
+    "cSpell.enabledLanguageIds": [
+        "latex"
+    ]
 }

@@ -12,9 +12,11 @@ from scipy import array as arr
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
+import pandas as pd
+
 from tabulate import tabulate
 
-plt.rcParams["figure.figsize"] = (4*1.5, 2.5*1.5)
+plt.rcParams["figure.figsize"] = (4 * 1.5, 2.5 * 1.5)
 plt.rcParams["figure.dpi"] = 100
 plt.rcParams["text.usetex"] = True
 plt.rcParams['text.latex.unicode'] = True
@@ -25,11 +27,20 @@ plt.rcParams["text.latex.preamble"] = r"""
 """
 
 
-def table_print(table, header=True, tablefmt="simple", **kwargs):
+def latex_table(table, header=True, tablefmt="latex_booktabs", **kwargs):
     if header:
         print(tabulate(table, headers="keys", tablefmt=tablefmt, **kwargs))
     else:
         print(tabulate(table, tablefmt=tablefmt, **kwargs))
+
+
+def dataframe_from_csv(csv, index_col=None, **kwargs):
+    return pd.read_csv(csv, sep=r"\s+,\s+",
+                       engine="python",
+                       skip_blank_lines=True,
+                       index_col=index_col,
+                       comment="#",
+                       ** kwargs)
 
 
 def relative(self):

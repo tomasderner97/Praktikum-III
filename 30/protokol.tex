@@ -1,21 +1,104 @@
 \documentclass{protokol}
-  \leftheader{Jednoduché aplikace interference}
-  \centerheader{Praktikum III}
-  \rightheader{Tomáš Derner}
+\leftheader{Jednoduché aplikace interference}
+\centerheader{Praktikum III}
+\rightheader{Tomáš Derner}
 
-  \begin{document}
+\begin{document}
 
-    \section*{Sth}
+  \section*{Úkol}
 
     \begin{enumerate}
       \item Změřte tloušťku tenké vrstvy ve dvou různých místech. Vyhodnoťte získané tloušťky a diskutujte, zda je vrstva v rámci chyby nepřímého měření na obou místech stejně silná.
       \item Pomocí Newtonových interferenčních kroužků změřte oba poloměry křivosti u dvou vybraných čoček. Chybu v určení poloměru křivosti stanovte z vhodně použité lineární regrese.
       \item Kontrolu vámi provedené kalibrace stupnice okuláru proveďte metodou postupných měření a zpracujte lineární regresí.
-      \item Výsledky měření v bodě 2 porovnejte s optickou mohutností čoček změřenou pomocí fokometru. Index lomu materiálu měřených čoček je $1,523$.
+      \item Výsledky měření v bodě 2 porovnejte s optickou mohutností čoček změřenou pomocí fokometru. Index lomu materiálu měřených čoček je \(1,523\).
     \end{enumerate}
 
-    Rovnice:~\eqref{eq:sth}
+  \section*{Teorie}
 
-    \input{sth}
+    \subsection*{Tolanského metoda}
+
+      Pro měření tloušťky tenké vrstvy můžeme využít jevu interference mnoha svazků, přesněji metodu Tolanského. Na měřené vrstvě vytvoříme vryp a vrstvu pokryjeme odrazivým materiálem. Následně mezi takto upravenou vrstvou a polopropustným zrcátkem vytvoříme vzduchovou mezeru s malým úhlem klínu. Toto následně osvětlíme monochromatickým světlem. Interferenční proužky budou v místě vrypu posunuty. V tomto praktiku je již připravená aparatura popsaná detailně v \cite{mereni}. 
+      
+      Pro tloušťku vrstvy platí vztah
+      \begin{equation} \label{eq:vrstva}
+        t = \frac{x_1}{x_2} \frac{\lambda}{2},
+      \end{equation}
+      kde $x_1$ je posuv polohy interferenčního proužku na vrypu, $x_2$ vzdálenost dvou sousedních proužků a $\lambda$ vlnová délka světla.
+
+    \subsection*{Newtonovy kroužky}
+
+      Osvícením skla položeného na vypuklé čočce získáme obrazec způsobený interferencí na vzduchové vrstvě mezi sklem a čočkou. Tento obrazec sestává ze střídajících se koncentrických světlých a tmavých kroužků. Měřením poloměrů kroužků $\rho_k$ řádů $k$ jsme schopni určit poloměr křivosti čočky $R$ lineární regresí podle vztahu
+      \begin{equation} \label{eq:newton}
+        \frac{\rho_k^2}{R} + d = k \lambda,
+      \end{equation} 
+      kde $d$ je v praxi nenulová vzdálenost čočky od skla.
+
+      Použitá aparatura je opět detailně popsána v \cite{mereni}. Při měření používáme počítačové snímání obrazu z mikroskopu. Tento obraz však musí být kalibrován, protože hodnoty vzdáleností objektů zobrazených mikroskopem samozřejmě závisí na použitém zvětšení. Kalibraci zkontrolujeme metodou postupných měření.
+      
+      Vypočtené poloměry křivosti čoček ověříme fokometrem. Tento přístroj však měří v optickou mohutnost v jednotkách dioptrie a tato hodnota v sobě zahrnuje křivost obou stran čočky. Optickou mohutnost čočky lze spočíst z indexu lomu prostředí $n$ a poloměrů křivosti $r_1$ a $r_2$ podle vztahu
+      \begin{equation} \label{eq:mohutnost}
+        \varphi = (n - 1)(\frac{1}{r_1} + \frac{1}{r_2})
+      \end{equation}
+
+  \section*{Výsledky}
+
+    Protože s použitými aparaturami nejsme schopni rozlišit individuální vlnové délky sodíkového dubletu $\SI{588.9950}{\nano\metre}$ a $\SI{589.5924}{\nano\metre}$, používáme jejich aritmetický průměr $\lambda = \SI{589.2937}{\nano\metre}$.
+
+    \subsection*{Úkol 1} 
+      
+      Následující dvě tabulky obsahují naměřené hodnoty potřebné pro výpočet tloušťky tenké vrstvy. Hodnoty $x_{mv}$ a $x_{v}$ jsou odečtené dílky stupnice v polohách proužků mimo vryp a ve vrypu, z nich jsou spočteny hodnoty $x_1$ a $x_2$. Chyba měření byla určena na $\num{0.10}$ dílku.
+
+      \begin{table}[H]
+        \centering
+        \setlength{\tabcolsep}{10pt}
+        \input{tab/vrstva1}
+        \caption{Hodnoty pro první místo vrstvy}
+        \label{tab:vrstva1}
+      \end{table}
+      
+      \begin{table}[H]
+        \centering
+        \setlength{\tabcolsep}{10pt}
+        \input{tab/vrstva2}
+        \caption{Hodnoty pro druhé místo vrstvy}
+        \label{tab:vrstva2}
+      \end{table}
+
+      Podle vzorce \eqref{eq:vrstva} byly spočítány tloušťky vrstvy ve dvou místech
+      $$ t_1 = \SI{4.9 \pm 0.1 e-7}{\metre}, $$
+      $$ t_2 = \SI{5.4 \pm 0.1 e-7}{\metre}. $$
     
-  \end{document}
+    \subsection*{Úkol 2}
+
+      \begin{table}[H]
+        \centering
+        \setlength{\tabcolsep}{10pt}
+        \input{tab/newton}
+        \caption{Poloměry Newtonových kroužků pro dvě čočky z obou stran}
+        \label{tab:newton}
+      \end{table}
+
+    \subsection*{Úkol 3}
+      
+      Před začátkem měření Newtonových kroužků byla provedena kalibrace použitého softwarového systému a následně její ověření pomocí metody postupných měření. Regresí získaných hodnot jsme dostali směrnici (tedy poměr skutečné a zobrazené hodnoty) $\SI{1.0007 \pm 0.0006}{}$, chybu kalibrace tedy považujeme za nepodstatnou. 
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[]{kalibrace}
+        \caption{Kalibrace softwarového systému použitého k měření}
+        \label{fig:u4s}
+      \end{figure}
+
+  \section*{Diskuse}
+
+  \section*{Závěr}
+    
+  \begin{thebibliography}{}
+
+    \bibitem{mereni}
+    Pokyny k měření "Jednoduché aplikace interferenčních jevů", dostupné z\\ \url{http://physics.mff.cuni.cz/vyuka/zfp/_media/zadani/pokyny/mereni_330.pdf}, 3.\,3.\,2018
+  
+  \end{thebibliography}
+
+\end{document}
