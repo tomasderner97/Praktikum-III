@@ -23,14 +23,14 @@
       Pro tloušťku vrstvy platí vztah
       \begin{equation} \label{eq:vrstva}
         t = \frac{x_1}{x_2} \frac{\lambda}{2},
-      \end{equation}
+      \end{equation} 
       kde $x_1$ je posuv polohy interferenčního proužku na vrypu, $x_2$ vzdálenost dvou sousedních proužků a $\lambda$ vlnová délka světla.
 
     \subsection*{Newtonovy kroužky}
 
       Osvícením skla položeného na vypuklé čočce získáme obrazec způsobený interferencí na vzduchové vrstvě mezi sklem a čočkou. Tento obrazec sestává ze střídajících se koncentrických světlých a tmavých kroužků. Měřením poloměrů kroužků $\rho_k$ řádů $k$ jsme schopni určit poloměr křivosti čočky $R$ lineární regresí podle vztahu
       \begin{equation} \label{eq:newton}
-        \frac{\rho_k^2}{R} + d = k \lambda,
+        \frac{\rho_k^2}{\lambda} = Rk - \frac{Rd}{\lambda},
       \end{equation} 
       kde $d$ je v praxi nenulová vzdálenost čočky od skla.
 
@@ -71,6 +71,8 @@
     
     \subsection*{Úkol 2}
 
+      Tabulka \ref{tab:newton} obsahuje naměřené hodnoty poloměrů Newtonových kroužků vytvořených odpovídajícími čočkami. 
+      
       \begin{table}[H]
         \centering
         \setlength{\tabcolsep}{10pt}
@@ -78,6 +80,23 @@
         \caption{Poloměry Newtonových kroužků pro dvě čočky z obou stran}
         \label{tab:newton}
       \end{table}
+
+      Následující graf zachycuje použité lineární regrese podle vztahu \eqref{eq:newton}.
+      
+      \begin{figure}[H]
+        \centering
+        \includegraphics[]{newton}
+        \caption{Lineární závislosti použité k získání poloměrů křivosti}
+        \label{fig:newton}
+      \end{figure}
+
+      Byly získány hodnoty poloměrů křivosti
+      $$ R_{A1} = \SI{0.073 \pm 0.001}{m}, $$
+      $$ R_{A2} = \SI{0.079 \pm 0.001}{m}, $$
+      $$ R_{B1} = \SI{0.097 \pm 0.001}{m}, $$
+      $$ R_{B2} = \SI{0.048 \pm 0.001}{m}. $$
+
+      Chyby hodnot odpovídají chybám regrese.
 
     \subsection*{Úkol 3}
       
@@ -90,9 +109,42 @@
         \label{fig:u4s}
       \end{figure}
 
+    \subsection*{Úkol 4}
+
+      Fokometrem byla změřena optická mohutnost čoček 
+      $$ \varphi_A = \SI{13.75 \pm 0.25}{D}, $$
+      $$ \varphi_B = \SI{17.25 \pm 0.25}{D}. $$
+
+      Z předchozích výsledků byly podle vztahu \eqref{eq:mohutnost} spočteny optické mohutnosti
+      $$ \varphi_A = \SI{13.78 \pm 0.13}{D}, $$
+      $$ \varphi_B = \SI{16.29 \pm 0.23}{D}. $$
+
   \section*{Diskuse}
 
+    Při měření tloušťky vrstvy byly polohy interferenčních proužků měřeny v místě přechodu světlého a tmavého proužku. Interferenční obrazec byl však značně rozmazaný, tedy nebylo snadné rozeznat přesnou hranici proužku, a proto byla naměřeným hodnotám přiřčena značná chyba. I přes to je však zřejmé, že tloušťka vrstvy se v měřených místech značně liší.
+
+    Hodnota optické mohutnosti čočky A spočtená z poloměrů křivosti získaných pomocí Newtonových kroužků se moc neliší a toto měření se dá považovat za úspěšné. Hodnoty pro čočku B se však od sebe liší o zhruba dvojnásobek součtu chyb, v průběhu měření tedy vznikla značná chyba, nejspíše hrubého druhu.
+
   \section*{Závěr}
+
+    Byla změřena tloušťka tenké vrstvy na dvou místech 
+    $$ t_1 = \SI{4.9 \pm 0.1 e-7}{\metre}, $$
+    $$ t_2 = \SI{5.4 \pm 0.1 e-7}{\metre}. $$
+
+    Byly změřeny poloměry křivosti dvou čoček 
+    $$ R_{A1} = \SI{0.073 \pm 0.001}{m}, $$
+    $$ R_{A2} = \SI{0.079 \pm 0.001}{m}, $$
+    $$ R_{B1} = \SI{0.097 \pm 0.001}{m}, $$
+    $$ R_{B2} = \SI{0.048 \pm 0.001}{m}. $$
+
+    Z ověření kalibrace metodou postupných měření vyplynula zanedbatelná chyba kalibrace.
+
+    Fokometrem byla změřena optická mohutnost čoček 
+    $$ \varphi_A = \SI{13.75 \pm 0.25}{D}, $$
+    $$ \varphi_B = \SI{17.25 \pm 0.25}{D}, $$
+    hodnoty spočtené pomocí Newtonových kroužků jsou
+    $$ \varphi_A = \SI{13.78 \pm 0.13}{D}, $$
+    $$ \varphi_B = \SI{16.29 \pm 0.23}{D}. $$
     
   \begin{thebibliography}{}
 
