@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.9.20)  7 MAR 2018 20:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.9.20)  10 MAR 2018 18:33
 entering extended mode
 **c:/Users/tomas/Repositories/praktikum-iii/5/protokol.tex
 (c:/Users/tomas/Repositories/praktikum-iii/5/protokol.tex
@@ -2400,7 +2400,6 @@ Overfull \hbox (0.2926pt too wide) in paragraph at lines 12--13
 dvou lu-mi-nis-cencnch diod v pro-pustnem
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2410,31 +2409,136 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{C:/Users/tomas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
+Overfull \hbox (3.62982pt too wide) in paragraph at lines 59--60
+\OT1/cmr/m/n/10.95 mereny au-to-ma-ticky mul-ti-me-t-rem \OT1/cmr/bx/n/10.95 
+Ke-i-thley 6487 \OT1/cmr/m/n/10.95 s au-to-ma-tickym na-sta-venm roz-sahu. C
+hyby
+ []
 
-(protokol.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 33.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 33.
+<plot/red.pdf, id=41, pagebox=cropbox, 433.62pt x 271.0125pt>
+File: plot/red.pdf Graphic file (type pdf)
+<use plot/red.pdf>
+Package pdftex.def Info: plot/red.pdf  used on input line 80. on input line 80.
+
+Package pdftex.def Info: Requested size: 433.61894pt x 271.01183pt on input lin
+e 80.
+[2]
+<plot/red_svet.pdf, id=60, pagebox=cropbox, 433.62pt x 271.0125pt>
+File: plot/red_svet.pdf Graphic file (type pdf)
+<use plot/red_svet.pdf>
+Package pdftex.def Info: plot/red_svet.pdf  used on input line 87. on input lin
+e 87.
+Package pdftex.def Info: Requested size: 433.61894pt x 271.01183pt on input lin
+e 87.
+<plot/red_log.pdf, id=61, pagebox=cropbox, 433.62pt x 271.0125pt>
+File: plot/red_log.pdf Graphic file (type pdf)
+<use plot/red_log.pdf>
+Package pdftex.def Info: plot/red_log.pdf  used on input line 94. on input line
+ 94.
+Package pdftex.def Info: Requested size: 433.61894pt x 271.01183pt on input lin
+e 94.
+ [3 <./plot/red.pdf> <./plot/red_svet.pdf
+
+pdfTeX warning: pdflatex (file ./plot/red_svet.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>]
+<plot/blue.pdf, id=696, pagebox=cropbox, 433.62pt x 271.0125pt>
+File: plot/blue.pdf Graphic file (type pdf)
+<use plot/blue.pdf>
+Package pdftex.def Info: plot/blue.pdf  used on input line 101. on input line 1
+01.
+Package pdftex.def Info: Requested size: 433.61894pt x 271.01183pt on input lin
+e 101.
+<plot/blue_svet.pdf, id=697, pagebox=cropbox, 433.62pt x 271.0125pt>
+File: plot/blue_svet.pdf Graphic file (type pdf)
+<use plot/blue_svet.pdf>
+Package pdftex.def Info: plot/blue_svet.pdf  used on input line 108. on input l
+ine 108.
+Package pdftex.def Info: Requested size: 433.61894pt x 271.01183pt on input lin
+e 108.
+ [4 <./plot/red_log.pdf> <./plot/blue.pdf
+
+pdfTeX warning: pdflatex (file ./plot/blue.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+>]
+<plot/blue_log.pdf, id=736, pagebox=cropbox, 433.62pt x 271.0125pt>
+File: plot/blue_log.pdf Graphic file (type pdf)
+<use plot/blue_log.pdf>
+Package pdftex.def Info: plot/blue_log.pdf  used on input line 115. on input li
+ne 115.
+Package pdftex.def Info: Requested size: 433.61894pt x 271.01183pt on input lin
+e 115.
+
+Overfull \hbox (5.00716pt too wide) in paragraph at lines 122--123
+\OT1/cmr/m/n/10.95 Nasledujc graf zob-ra-zuje vol-tamperove cha-rak-te-r
+is-tiky fo-to-tran-zis-toru pro osvetlen zpusobene
+ []
+
+<plot/fototr.pdf, id=737, pagebox=cropbox, 433.62pt x 271.0125pt>
+File: plot/fototr.pdf Graphic file (type pdf)
+<use plot/fototr.pdf>
+Package pdftex.def Info: plot/fototr.pdf  used on input line 126. on input line
+ 126.
+Package pdftex.def Info: Requested size: 433.61894pt x 271.01183pt on input lin
+e 126.
+[5 <./plot/blue_svet.pdf> <./plot/blue_log.pdf
+
+pdfTeX warning: pdflatex (file ./plot/blue_log.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>]
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 137.
+
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [6 <./plot/fototr.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+[]$\OT1/cmtt/m/n/10.95 http : / / physics . mff . cuni . cz / vyuka / zfp / _me
+dia / zadani / texty / txt _ 305 . pdf$[]\OT1/cmr/m/n/10.95 ,
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+[]$\OT1/cmtt/m/n/10.95 http : / / physics . mff . cuni . cz / vyuka / zfp / _me
+dia / zadani / pokyny / pikoampermetr .
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
+[8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
+ (protokol.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
 Package rerunfilecheck Info: File `protokol.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 33.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 188.
  ) 
 Here is how much of TeX's memory you used:
- 19205 strings out of 493323
- 364843 string characters out of 3139066
- 429238 words of memory out of 3000000
- 22581 multiletter control sequences out of 15000+200000
- 535699 words of font info for 42 fonts, out of 3000000 for 9000
+ 19323 strings out of 493323
+ 367159 string characters out of 3139066
+ 433847 words of memory out of 3000000
+ 22657 multiletter control sequences out of 15000+200000
+ 539711 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,11n,59p,10474b,855s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on protokol.pdf (1 page, 60426 bytes).
+ 48i,12n,59p,10474b,1030s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/tomas/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/cm-super/cm-super-
+ts1.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tomas/AppData/Roaming/MiKTeX/2.9/fon
+ts/type1/public/cm-super/sfrm1095.pfb>
+Output written on protokol.pdf (8 pages, 603113 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1472 PDF objects out of 1728 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

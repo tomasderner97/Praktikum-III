@@ -9,7 +9,13 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "cSpell.language": "en,cs",
-    "cSpell.words": [],
+    "cSpell.words": [
+        "Boltzmannova",
+        "Boltzmanova",
+        "Fotodiody",
+        "fotodiod",
+        "fototranzistory"
+    ],
     "cSpell.enabledLanguageIds": [
         "latex"
     ]
