@@ -3,7 +3,7 @@ This module serves as the basic import for scientific processing of data.
 It groups various useful modules and defines helper functions.
 """
 
-__version__ = "0.1.2"
+__version__ = "18.03.17"
 
 import warnings
 
@@ -46,8 +46,13 @@ def dataframe_from_csv(csv, index_col=None, **kwargs):
                        ** kwargs)
 
 
-def relative(self):
-    return self.s / self.n
+def mean_and_error(values):
+    array = sp.array(values)
+    mean = array.mean()
+    single_value_error = array.std(ddof=1)
+    mean_error = single_value_error / sp.sqrt(len(array))
+
+    return mean, mean_error
 
 
 def f_line(x, a, b):
