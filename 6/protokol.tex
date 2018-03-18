@@ -20,24 +20,75 @@
     V tomto praktiku měříme ohyb laserového svazku způsobený difrakční mřížkou a štěrbinami. Protože použitý laser má poměrně velkou divergenci svazku, použijeme v měření spojnou čočku, viz \cite{mereni}. 
 
     Pro získání mřížkové konstanty $a$ využijeme vztahu pro úhel $\varphi$ mezi dvěma body maximální intenzity difrakčního obrazce
-    \begin{equation}
+    \begin{equation} \label{eq:mrizkova_konstanta}
       \varphi = \frac{\lambda}{a},
     \end{equation} 
     kde $\lambda$ je vlnová délka použitého světla. Úhel $\varphi$ získáme z rovnice
-    \begin{equation}
+    \begin{equation} \label{eq:phi}
       \varphi = \frac{x}{l},
     \end{equation}
-    kde $x$ je vzdálenost dvou maxim a $l$ vzdálenost difrakčního obrazce od spojné čočky.
+    kde $x$ je vzdálenost dvou maxim a $l$ vzdálenost difrakčního obrazce od spojné čočky. Předpokládáme malé úhly.
 
   \section*{Výsledky}
+
+    Vzdálenost difrakčních obrazců od čočky byla 
+    $$ l = \SI{1.000 \pm 0.005}{m}. $$
 
     \subsection*{Úkol 1}
 
     \subsection*{Úkol 2}
 
+      Intenzita světla vynesená v grafech níže nabývá hodnot 0 - 255 a popisuje odezvu snímače na dopadající světlo.
+
+      V grafu \ref{fig:mrizka} je zobrazen difrakční obrazec difrakční mřížky. Odečtením poloh peaků a použitím vzorce \eqref{eq:mrizkova_konstanta} a \eqref{eq:phi} jsme dostali mřížkovou konstantu 
+      $$ a = \SI{5.20 \pm 0.05 e-5}{m}. $$
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[]{mrizka} 
+        \caption{Difrakční obrazec mřížky}
+        \label{fig:mrizka}
+      \end{figure}
+
     \subsection*{Úkol 3}
 
+      Byla provedena kalibrace měřítka mikroskopu metodou postupných měření. Data byla zpracována lineární regresí, směrnice regrese je $\num{6.10 \pm 0.01}$. Jeden dílek na stupnici mikroskopu tedy odpovídá $\frac{1}{\num{6.10}}$ milimetrům.
+
     \subsection*{Úkol 4}
+
+      Pomocí mikroskopu jsme získali rozměry použitých optických prvků, tabulka \ref{tab:mrizka} obsahuje vzdálenosti deseti vrypů mřížky, tabulka \ref{tab:sterbina_stredni} šířku štěrbiny na třech místech a tabulka \ref{tab:dvojs_blizke} šířku a vzdálenost štěrbin na třech místech.
+
+      \begin{table}[H]
+        \centering
+        \setlength{\tabcolsep}{10pt}
+        \input{tab/mrizka}
+        \caption{Hodnoty vzdáleností vrypů mřížky}
+        \label{tab:mrizka}
+      \end{table}
+
+      Průměrná hodnota vzdálenosti dvou vrypů a tedy i mřížkové konstanty je $$ a = \SI{5.09 \pm 0.07 e-5}{m}$$.
+      
+      \begin{table}[H]
+        \centering
+        \setlength{\tabcolsep}{5pt}
+        \input{tab/sterbina_stredni}
+        \caption{Hodnoty šířky štěrbiny na třech místech}
+        \label{tab:sterbina_stredni}
+      \end{table}
+
+      Průměrná hodnota šířky štěrbiny je $$ b = \SI{2.09 \pm 0.03 e-4}{m}$$.
+      
+      \begin{table}[H]
+        \centering
+        \setlength{\tabcolsep}{10pt}
+        \input{tab/dvojs_blizke}
+        \caption{Hodnoty šířky a vzdálenosti štěrbin na třech místech}
+        \label{tab:dvojs_blizke}
+      \end{table}
+
+      Aritmetický průměr vzdálenosti štěrbin je 
+      $$ a = \SI{6.02 \pm 0.03 e-4}{m}. $$
+
 
   \section*{Diskuse}
 

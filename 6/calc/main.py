@@ -51,8 +51,8 @@ def plot_mrizka(show=False, save=False):
     ax.plot(mrizka["position"], mrizka["intensity"],
             ".k", ms=1)
 
-    ax.set_xlabel(r"x label")
-    ax.set_ylabel(r"y label")
+    ax.set_xlabel(r"Poloha měřicí hlavy $[\si{mm}]$")
+    ax.set_ylabel(r"Intenzita světla")
     # ax.legend()
     fig.tight_layout()
 
@@ -74,15 +74,15 @@ def mrizka_konstanta_z_difrakce():
 # ----- TENKA STERBINA ----- #
 
 
-sterbina_tenka = dataframe_from_csv("../data/sterbina_tenka.txt")
+sterbina_stredni = dataframe_from_csv("../data/sterbina_stredni.txt")
 
 
 def plot_sterbina_tenka(show=False, save=False):
     fig = plt.figure()
     ax = fig.add_subplot(111)
 
-    ax.plot(sterbina_tenka["position"], sterbina_tenka["intensity"],
-            ".k", ms=1)
+    ax.plot(sterbina_stredni["position"], sterbina_stredni["intensity"],
+            "k", ms=1)
 
     ax.set_xlabel(r"x label")
     ax.set_ylabel(r"y label")
@@ -103,7 +103,7 @@ def plot_dvojs_blizke(show=False, save=False):
     ax = fig.add_subplot(111)
 
     ax.plot(dvojs_blizke["position"], dvojs_blizke["intensity"],
-            ".k", ms=1)
+            "k", ms=1)
 
     ax.set_xlabel(r"x label")
     ax.set_ylabel(r"y label")

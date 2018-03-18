@@ -3,7 +3,7 @@ This module serves as the basic import for scientific processing of data.
 It groups various useful modules and defines helper functions.
 """
 
-__version__ = "18.03.17"
+__version__ = "18.03.18"
 
 import warnings
 
@@ -38,7 +38,7 @@ def latex_table(table, header=True, tablefmt="latex_booktabs", **kwargs):
 
 
 def dataframe_from_csv(csv, index_col=None, **kwargs):
-    return pd.read_csv(csv, sep=r"\s+,\s+",
+    return pd.read_csv(csv, sep=r"\s*,\s*",
                        engine="python",
                        skip_blank_lines=True,
                        index_col=index_col,
