@@ -77,22 +77,22 @@ def mrizka_konstanta_z_difrakce():
 sterbina_stredni = dataframe_from_csv("../data/sterbina_stredni.txt")
 
 
-def plot_sterbina_tenka(show=False, save=False):
+def plot_sterbina_stredni(show=False, save=False):
     fig = plt.figure()
     ax = fig.add_subplot(111)
 
     ax.plot(sterbina_stredni["position"], sterbina_stredni["intensity"],
             "k", ms=1)
 
-    ax.set_xlabel(r"x label")
-    ax.set_ylabel(r"y label")
+    ax.set_xlabel(r"Poloha měřicí hlavy [mm]")
+    ax.set_ylabel(r"Intenzita světla")
     # ax.legend()
     fig.tight_layout()
 
     if show:
         plt.show()
     if save:
-        fig.savefig("../plot/sterbina_tenka.pdf")
+        fig.savefig("../plot/sterbina_stredni.pdf")
 
 
 dvojs_blizke = dataframe_from_csv("../data/dvojs_blizke_maxima.txt")
@@ -105,15 +105,15 @@ def plot_dvojs_blizke(show=False, save=False):
     ax.plot(dvojs_blizke["position"], dvojs_blizke["intensity"],
             "k", ms=1)
 
-    ax.set_xlabel(r"x label")
-    ax.set_ylabel(r"y label")
+    ax.set_xlabel(r"Poloha měřicí hlavy [mm]")
+    ax.set_ylabel(r"Intenzita světla")
     # ax.legend()
     fig.tight_layout()
 
     if show:
         plt.show()
     if save:
-        fig.savefig("")
+        fig.savefig("../plot/dvojs_blizke.pdf")
 
 
 # ----- ROZMERY ----- #
@@ -125,3 +125,13 @@ def mrizka_konstanta_z_mikroskopu():
     vzdalenost_dvou_vrypu = vzdalenost_dvou_vrypu.dropna().values
     vzd_v_metrech = vzdalenost_dvou_vrypu * m_v_dilku
     return mean_and_error(vzd_v_metrech)
+
+# -----
+
+
+vzd_minim_st = arr([9.330 - 6.295, 6.295 - 3.226, -
+                    2.999 + 6.172, -6.172 + 9.259])
+vzd_minim_dvs_obalka = (5.378 + 5.349) / 2
+vzd_minim_dvs = arr([3.818, 2.720, 1.638, 0.572, -
+                     0.447, -1.434, -2.452, -3.566])
+vzd_minim_dvs = - sp.diff(vzd_minim_dvs)

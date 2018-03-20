@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.9.20)  17 MAR 2018 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.9.20)  20 MAR 2018 17:46
 entering extended mode
 **c:/Users/tomas/Repositories/praktikum-iii/6/protokol.tex
 (c:/Users/tomas/Repositories/praktikum-iii/6/protokol.tex
@@ -2401,19 +2401,11 @@ en urcete pa-ra-me-try pouzitych difrakcnch
  []
 
 
-Overfull \hbox (22.54205pt too wide) in paragraph at lines 29--31
-\OT1/cmr/m/n/10.95 kde $\OML/cmm/m/it/10.95 x$ \OT1/cmr/m/n/10.95 je vzdalenos
-t dvou ma-xim a $\OML/cmm/m/it/10.95 l$ \OT1/cmr/m/n/10.95 vzdalenost difrakc
-nho ob-razce od spojne cocky. Predpokladame
+Overfull \hbox (4.9767pt too wide) in paragraph at lines 32--33
+[]\OT1/cmr/m/n/10.95 Pro uhel mezi sou-sednmi dvema body mi-nimaln in-te
+n-zity svetla difrakcnho ob-razce sterbiny
  []
 
-<plot/mrizka.pdf, id=7, pagebox=cropbox, 433.62pt x 271.0125pt>
-File: plot/mrizka.pdf Graphic file (type pdf)
-<use plot/mrizka.pdf>
-Package pdftex.def Info: plot/mrizka.pdf  used on input line 48. on input line 
-48.
-Package pdftex.def Info: Requested size: 433.61894pt x 271.01183pt on input lin
-e 48.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2423,7 +2415,42 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{C:/Users/tomas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-(tab/mrizka.tex
+(tab/u1.tex)
+<plot/mrizka.pdf, id=32, pagebox=cropbox, 433.62pt x 271.0125pt>
+File: plot/mrizka.pdf Graphic file (type pdf)
+<use plot/mrizka.pdf>
+Package pdftex.def Info: plot/mrizka.pdf  used on input line 77. on input line 
+77.
+Package pdftex.def Info: Requested size: 433.61894pt x 271.01183pt on input lin
+e 77.
+ [2]
+<plot/sterbina_stredni.pdf, id=45, pagebox=cropbox, 433.62pt x 268.12169pt>
+File: plot/sterbina_stredni.pdf Graphic file (type pdf)
+<use plot/sterbina_stredni.pdf>
+Package pdftex.def Info: plot/sterbina_stredni.pdf  used on input line 84. on i
+nput line 84.
+Package pdftex.def Info: Requested size: 433.61894pt x 268.12103pt on input lin
+e 84.
+<plot/dvojs_blizke.pdf, id=46, pagebox=cropbox, 433.62pt x 268.12169pt>
+File: plot/dvojs_blizke.pdf Graphic file (type pdf)
+<use plot/dvojs_blizke.pdf>
+Package pdftex.def Info: plot/dvojs_blizke.pdf  used on input line 91. on input
+ line 91.
+Package pdftex.def Info: Requested size: 433.61894pt x 268.12103pt on input lin
+e 91.
+ [3 <./plot/mrizka.pdf> <./plot/sterbina_stredni.pdf
+
+pdfTeX warning: pdflatex (file ./plot/sterbina_stredni.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>]
+<plot/kalibrace.pdf, id=79, pagebox=cropbox, 433.62pt x 271.0125pt>
+File: plot/kalibrace.pdf Graphic file (type pdf)
+<use plot/kalibrace.pdf>
+Package pdftex.def Info: plot/kalibrace.pdf  used on input line 111. on input l
+ine 111.
+Package pdftex.def Info: Requested size: 433.61894pt x 271.01183pt on input lin
+e 111.
+ [4 <./plot/dvojs_blizke.pdf>] (tab/mrizka.tex
 Overfull \hbox (6.6112pt too wide) detected at line 8
  
  []
@@ -2468,7 +2495,7 @@ Overfull \hbox (6.6112pt too wide) detected at line 16
  
  []
 
-) [2 <./plot/mrizka.pdf>] (tab/sterbina_stredni.tex
+) (tab/sterbina_stredni.tex
 Overfull \hbox (6.6112pt too wide) detected at line 10
  
  []
@@ -2483,35 +2510,53 @@ Overfull \hbox (6.6112pt too wide) detected at line 12
  
  []
 
-) (tab/dvojs_blizke.tex) [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
+) [5 <./plot/kalibrace.pdf>] (tab/dvojs_blizke.tex)
+Overfull \hbox (2.51285pt too wide) in paragraph at lines 158--159
+[]\OT1/cmr/m/n/10.95 Chybove udaje u hod-not merenych neprmou me-to-dou
+ jsou o neco mens nez u od-povdajcch
+ []
+
+
+Overfull \hbox (3.0009pt too wide) in paragraph at lines 158--159
+\OT1/cmr/m/n/10.95 hod-not me-tody prme predevsm proto, ze pri mere
+n difrakc nen snadne od-had-nout skutecnou
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
+[]$\OT1/cmtt/m/n/10.95 http : / / physics . mff . cuni . cz / vyuka / zfp / _me
+dia / zadani / pokyny / mereni _ 306 . pdf$[]\OT1/cmr/m/n/10.95 ,
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
+[7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
  (protokol.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
 Package rerunfilecheck Info: File `protokol.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
  ) 
 Here is how much of TeX's memory you used:
- 19249 strings out of 493323
- 365618 string characters out of 3139066
- 444552 words of memory out of 3000000
- 22600 multiletter control sequences out of 15000+200000
+ 19280 strings out of 493323
+ 366256 string characters out of 3139066
+ 440852 words of memory out of 3000000
+ 22618 multiletter control sequences out of 15000+200000
  536999 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,13n,59p,10483b,857s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,13n,59p,10483b,1014s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmsy8.pfb>
-Output written on protokol.pdf (4 pages, 128470 bytes).
+sfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmtt10.pfb>
+Output written on protokol.pdf (7 pages, 207928 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
