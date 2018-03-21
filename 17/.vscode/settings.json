@@ -1,0 +1,16 @@
+{
+    "files.exclude": {
+        "*.aux": true,
+        "*.log": true,
+        "*.out": true,
+        "*.synctex.gz": true,
+        "**/__pycache__": true
+    },
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "cSpell.language": "en,cs",
+    "cSpell.words": [],
+    "cSpell.enabledLanguageIds": [
+        "latex"
+    ]
+}

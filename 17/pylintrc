@@ -1,0 +1,5 @@
+[MESSAGES CONTROL]
+
+disable=invalid-name,unused-wildcard-import,missing-docstring,len-as-condition,wildcard-import
+
+max-line-length=100
