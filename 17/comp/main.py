@@ -1,5 +1,79 @@
 from labrep_utils import *
 
+u1 = dataframe_from_csv("../data/u1.csv")
+
+
+def plot_u1_l450(show=False, save=False):
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+
+    fit = FitCurve(f_exp_simple, u1["n"], u1["l450"], p0=(1, -1))
+
+    print(fit.params)
+    print(fit.errors)
+
+    ax.plot(*fit.curve(), c="grey", label="Exponenciální fit")
+    ax.plot(u1["n"], u1["l450"], "kx", label="Naměřené hodnoty")
+
+    ax.set_xlabel(r"Počet skleněných destiček")
+    ax.set_ylabel(r"$\theta_i [1]$")
+    ax.set_xticks(u1["n"])
+    ax.legend()
+    fig.tight_layout()
+
+    if show:
+        plt.show()
+    if save:
+        fig.savefig("../plot/u1_l450.pdf")
+
+
+def plot_u1_l520(show=False, save=False):
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+
+    fit = FitCurve(f_exp_simple, u1["n"], u1["l520"], p0=(1, -1))
+    print(fit.params)
+    print(fit.errors)
+
+    ax.plot(*fit.curve(), c="grey", label="Exponenciální fit")
+    ax.plot(u1["n"], u1["l520"], "kx", label="Naměřené hodnoty")
+
+    ax.set_xlabel(r"Počet skleněných destiček")
+    ax.set_ylabel(r"$\theta_i [1]$")
+    ax.set_xticks(u1["n"])
+    ax.legend()
+    fig.tight_layout()
+
+    if show:
+        plt.show()
+    if save:
+        fig.savefig("../plot/u1_l520.pdf")
+
+
+def plot_u1_l600(show=False, save=False):
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+
+    fit = FitCurve(f_exp_simple, u1["n"], u1["l600"], p0=(1, -1))
+
+    print(fit.params)
+    print(fit.errors)
+
+    ax.plot(*fit.curve(), c="grey", label="Exponenciální fit")
+    ax.plot(u1["n"], u1["l600"], "kx", label="Naměřené hodnoty")
+
+    ax.set_xlabel(r"Počet skleněných destiček")
+    ax.set_ylabel(r"$\theta_i [1]$")
+    ax.set_xticks(u1["n"])
+    ax.legend()
+    fig.tight_layout()
+
+    if show:
+        plt.show()
+    if save:
+        fig.savefig("../plot/u1_l600.pdf")
+
+
 u2 = dataframe_from_csv("../data/u2.csv")
 
 
@@ -25,3 +99,7 @@ def plot_u2(show=False, save=False):
         plt.show()
     if save:
         fig.savefig("../plot/u2.pdf")
+
+
+def comp_R(n):
+    return (n - 1)**2 / (n + 1)**2
