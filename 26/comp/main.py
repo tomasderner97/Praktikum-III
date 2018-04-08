@@ -21,7 +21,9 @@ def plot_apertura(show=False, save=False):
 
     fit = FitCurve(f_gaussian, fx, fy)
 
-    ax.plot(*fit.curve(), ":", c="grey", label="Regrese")
+    ax.plot(apertura["angle"], 0.141 / sp.exp(1)**2 * sp.ones(len(apertura)),
+            ":", c="grey")
+    ax.plot(*fit.curve(), "--", c="grey", label="Regrese")
     ax.plot(apertura["angle"], apertura["U"], "kx", label="Naměřené hodnoty")
 
     ax.set_xlabel(r"$\varphi [\si{\degree}]$")
@@ -59,4 +61,4 @@ def plot_teploty(show=False, save=False):
     if show:
         plt.show()
     if save:
-        fig.savefig("")
+        fig.savefig("../plot/teploty.pdf")
