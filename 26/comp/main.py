@@ -49,9 +49,19 @@ def plot_teploty(show=False, save=False):
     U_20deg = teploty[["I", "U_20deg"]].dropna()
     U_30deg = teploty[["I", "U_30deg"]].dropna()
 
-    ax.plot(U_10deg["I"], U_10deg["U_10deg"], label=r"$ t = \SI{10}{\celsius} $")
-    ax.plot(U_20deg["I"], U_20deg["U_20deg"], label=r"$ t = \SI{20}{\celsius} $")
-    ax.plot(U_30deg["I"], U_30deg["U_30deg"], label=r"$ t = \SI{30}{\celsius} $")
+    fit10 = FitCurve(f_line, U_10deg["I"][:-4], U_10deg["U_10deg"][:-4])
+    fit20 = FitCurve(f_line, U_20deg["I"][:-6], U_20deg["U_20deg"][:-6])
+    fit30 = FitCurve(f_line, U_30deg["I"][:-5], U_30deg["U_30deg"][:-5])
+    print(fit10.params, fit10.errors)
+    print(fit20.params, fit20.errors)
+    print(fit30.params, fit30.errors)
+
+    ax.plot(*fit10.curve(overrun=(0.03, 0.03)), lw=1, c="C0")
+    ax.plot(*fit20.curve(overrun=(0.05, 0.03)), lw=1, c="C1")
+    ax.plot(*fit30.curve(overrun=(0.03, 0.03)), lw=1, c="C2")
+    ax.plot(U_10deg["I"], U_10deg["U_10deg"], "k.", label=r"$ t = \SI{10}{\celsius} $", c="C0")
+    ax.plot(U_20deg["I"], U_20deg["U_20deg"], "kx", label=r"$ t = \SI{20}{\celsius} $", c="C1")
+    ax.plot(U_30deg["I"], U_30deg["U_30deg"], "k+", label=r"$ t = \SI{30}{\celsius} $", c="C2")
 
     ax.set_xlabel(r"$I [\si{A}]$")
     ax.set_ylabel(r"$U [\si{V}]$")
