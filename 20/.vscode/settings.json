@@ -1,0 +1,27 @@
+{
+    "files.exclude": {
+        "*.aux": true,
+        "*.log": true,
+        "*.out": true,
+        "*.synctex.gz": true,
+        "**/__pycache__": true
+    },
+    "cSpell.words": [
+        "Brewsterova",
+        "Brewsterovým",
+        "Fresnelových",
+        "Lambertův",
+        "Malusova",
+        "Michelsonova",
+        "Michelsonův",
+        "absorbancí",
+        "fitovány",
+        "gaussovským",
+        "kolimátoru",
+        "mikrometrickým",
+        "transmitance",
+        "transmitanci",
+        "transmitancí",
+        "Čtvrtvlnná"
+    ],
+}
